@@ -31,7 +31,7 @@ public class SauceLabs {
    @Before
     public void browser() {
        
-  System.setProperty("webdriver.chrome.driver", "Drivers/msedgedriver.exe");
+  System.setProperty("webdriver.edge.driver", "Drivers/msedgedriver.exe");
         EdgeOptions options = new EdgeOptions();
         options.addArguments("--headless=new"); // Use "--headless" for older Edge versions
         driver = new EdgeDriver(options);
