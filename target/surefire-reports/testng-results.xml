@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-02T11:36:49 IST" name="Surefire suite" finished-at="2025-06-02T11:36:54 IST" duration-ms="5372">
+  <suite started-at="2025-06-03T16:23:34 IST" name="Surefire suite" finished-at="2025-06-03T16:23:57 IST" duration-ms="23095">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c33b74f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-06-02T11:36:49 IST" name="Surefire test" finished-at="2025-06-02T11:36:54 IST" duration-ms="5372">
+    <test started-at="2025-06-03T16:23:34 IST" name="Surefire test" finished-at="2025-06-03T16:23:57 IST" duration-ms="23095">
       <class name="runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@c33b74f]" started-at="2025-06-02T11:36:49 IST" name="setUpClass" finished-at="2025-06-02T11:36:50 IST" duration-ms="1620" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@c33b74f]" started-at="2025-06-03T16:23:34 IST" name="setUpClass" finished-at="2025-06-03T16:23:35 IST" duration-ms="947" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6075b2d3]]>
+                <![CDATA[org.testng.TestRunner@26a4551a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c33b74f]" started-at="2025-06-02T11:36:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T11:36:54 IST" duration-ms="3536" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c33b74f]" started-at="2025-06-03T16:23:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-03T16:23:57 IST" duration-ms="22038" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,48 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: session not created: Microsoft Edge failed to start: crashed.
-  (session not created: DevToolsActivePort file doesn't exist)
-  (The process started from msedge location C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.) 
-Host info: host: 'DESKTOP-52JJA80', ip: '192.168.0.4'
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [], extensions: []}}]}]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Microsoft Edge failed to start: crashed.
-  (session not created: DevToolsActivePort file doesn't exist)
-  (The process started from msedge location C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.) 
-Host info: host: 'DESKTOP-52JJA80', ip: '192.168.0.4'
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [], extensions: []}}]}]
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:174)
-at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:110)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:60)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:56)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:48)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:44)
-at businessComponents.SauceLabs.browser(SauceLabs.java:35)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@c33b74f]" started-at="2025-06-02T11:36:54 IST" name="tearDownClass" finished-at="2025-06-02T11:36:54 IST" duration-ms="71" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@c33b74f]" started-at="2025-06-03T16:23:57 IST" name="tearDownClass" finished-at="2025-06-03T16:23:57 IST" duration-ms="40" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

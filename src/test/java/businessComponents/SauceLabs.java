@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.support.ui.Select;
@@ -25,18 +26,21 @@ public class SauceLabs {
 
     //static WebDriver driver;
    WebDriver driver;
-    @Before
+    
+   
+   @Before
     public void browser() {
        
-  System.setProperty("webdriver.edge.driver", "Drivers/msedgedriver.exe");
-      //  EdgeOptions options = new EdgeOptions();
-       // options.addArguments("--headless=new"); // Use "--headless" for older Edge versions
-       // driver = new EdgeDriver(options);
-driver = new EdgeDriver();
+  System.setProperty("webdriver.chrome.driver", "Drivers/msedgedriver.exe");
+        EdgeOptions options = new EdgeOptions();
+        options.addArguments("--headless=new"); // Use "--headless" for older Edge versions
+        driver = new EdgeDriver(options);
+//driver = new EdgeDriver();
+//driver = new ChromeDriver();
         driver.manage().window().maximize();
 
-        System.out.println("Browser Launched Successfully");
-       // System.out.println("Browser Launched Successfully in Headless Mode");
+      //  System.out.println("Browser Launched Successfully");
+        System.out.println("Browser Launched Successfully in Headless Mode");
     }
 
     @After
@@ -47,7 +51,7 @@ driver = new EdgeDriver();
     }
 
     /**
-     * Navigates to the SwagLabs login page.
+     * Navigates to the SwagLabs login page.4
      */
     @Given("User is on SwagLabs Login page")
     public void login_page() {
